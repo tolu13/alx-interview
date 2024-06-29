@@ -1,12 +1,12 @@
 #!/usr/bin/python3
 """  determine the fewest number of coins needed to meet a given amount """
 
+
 def makeChange(coins, total):
     """dynamic programming """
     value = 0
     coins.sort(reverse=True)
-    
-    
+
     if total < 0:
         return 0
 
@@ -16,6 +16,7 @@ def makeChange(coins, total):
             total = total % coin
 
     return value if total == 0 else -1
+
 
 if __name__ == '__main__':
 
