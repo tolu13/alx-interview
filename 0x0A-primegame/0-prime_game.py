@@ -4,6 +4,7 @@
 
 
 def isWinner(x, nums):
+    """checking for prime """
     max_n = max(nums)  # Determine the maximum n we need to consider
     if max_n < 2:
         return None  # If max_n is less than 2, there's no valid game to play
