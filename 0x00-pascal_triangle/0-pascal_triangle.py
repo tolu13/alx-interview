@@ -20,7 +20,9 @@ def pascal_triangle(n):
                     # The first column is always set to 1
                     pascal[li].append(1)
                 else:
-                    pascal[li].append(pascal[li - 1][col] + pascal[li - 1][col - 1])
+                    prev_row = pascal[li - 1]
+                    current_val = prev_row[col] + prev_row[col - 1]
+                    pascal[li].append(current_val)
             elif col == li:
                 # The diagonal is always set to 1
                 pascal[li].append(1)
